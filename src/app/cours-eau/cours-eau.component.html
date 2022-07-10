@@ -1,0 +1,25 @@
+<p>Tableau de Température d'eau Station : {{ codeDep }}</p>
+
+<table class="styled-table" >
+    <thead>
+      <tr>
+        <th>Date Mesure</th>
+        <th>Heure</th>
+        <th>Valeur</th>
+        <th>Qualification</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let x of resultats" >
+           <td>{{x.date_mesure_temp}}</td>
+           <td>{{x.heure_mesure_temp}}</td>
+           <td>{{x.resultat}} {{x.symbole_unite}}</td>
+           <td>{{x.libelle_qualification}}</td>
+       </tr>
+    </tbody>
+  </table>
+
+<div >
+    <canvasjs-chart [options]="chartOptions" [styles]="{width: '90%', height:'360px'}" 
+    (chartInstance)="getChartInstance($event)"></canvasjs-chart>    
+</div>                          
