@@ -1,6 +1,10 @@
-<p>Tableau de Température d'eau Station : {{ codeDep }}</p>
 
-<table class="styled-table" >
+<table style="width: 97%; margin-left: 5px;">
+  <thead>
+    <tr><h2>Tableau de Température d'eau Station : {{ codeDep }} Gironde</h2></tr>
+    <tr>
+    
+<table class="styled-table" style="width: 45%;margin-left: 35%;" >
     <thead>
       <tr>
         <th>Date Mesure</th>
@@ -19,7 +23,10 @@
     </tbody>
   </table>
 
-<div >
-    <canvasjs-chart [options]="chartOptions" [styles]="{width: '90%', height:'360px'}" 
+<tr>
+    <canvasjs-chart [options]="chartOptions" [styles]="{width: '50%', height:'360px'}" 
     (chartInstance)="getChartInstance($event)"></canvasjs-chart>    
-</div>                          
+ 
+  </tr>
+  </thead>
+  </table>

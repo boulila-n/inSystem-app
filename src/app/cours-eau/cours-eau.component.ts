@@ -28,9 +28,9 @@ export class CoursEauComponent  {
 	
 	chartOptions = {
 	  animationEnabled: true,
-	  theme: "light2",
+	  theme: "light1",
 	  title:{
-		text: "Mesure Température d'eau	 le " + this.dateUnique.toLocaleDateString()
+		text: "Variation Température durant la 1 ére Journée"
 	  },
 	  axisX:{
 		title :"Heure de mesure"
